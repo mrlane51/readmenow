@@ -1,0 +1,26 @@
+{
+  "name": "readmegen",
+  "version": "1.0.0",
+  "description": "read me terminal generator for busy programmers",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrlane51/readmenow.git"
+  },
+  "keywords": [
+    "readme"
+  ],
+  "author": "mrlane51",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mrlane51/readmenow/issues"
+  },
+  "homepage": "https://github.com/mrlane51/readmenow#readme",
+  "dependencies": {
+    "find-config": "^1.0.0",
+    "inquirer": "^8.2.0"
+  }
+}
