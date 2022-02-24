@@ -27,7 +27,7 @@ const questions = [
         },
         {
             type: 'input',
-            name: 'techUsed',
+            name: 'technologies',
             message: 'What was the technologies used for your project?'
         },
         {
@@ -45,6 +45,28 @@ const questions = [
             name: 'Contributors',
             message: 'Would you like to add any Contributors?'
         },
+        {
+            type: 'input',
+            name: 'author',
+            message: 'Who was the original author of this project?'
+        },
+        {
+            type: 'rawlist',
+            name: 'license',
+            message: 'what license would you like to add?',
+            choices: ['MIT', 'GNU', 'None'],
+        },
+        {
+            type: 'input',
+                name: 'email',
+                    message: "What is your email?",
+    },  
+        {
+            type: 'input',
+                name: 'github',
+                    message: "What is your github url?",
+    },  
+];
 
 
 inquirer.prompt(questions).then((answers) => {
