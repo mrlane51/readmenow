@@ -1,7 +1,9 @@
 // packages needed for this application
 const { rejects } = require('assert');
 const fs = require('fs');
+const utils = require('utils');
 const inquirer = require('inquirer');
+const generateMd = require('./utils/generateMd');
 
 // inital output to welcome user
 console.log(`Hello, Welcome to MrLane51's Professional ReadMe Generator.`);
@@ -68,44 +70,26 @@ const questions = [
     },  
 ];
 
-
-inquirer.prompt(questions).then((answers) => {
-    console.log('\nReadMeTemplate:');
-    console.log(JSON.stringify(answers, null, '  '));
-});
-
-// extra optional types of prompts
-// {
-//     type: 'list',
-//         name: 'size',
-//             message: 'What size do you need?',
-//                 choices: ['Large', 'Medium', 'Small'],
-//                     filter(val) {
-//         return val.toLowerCase();
-//     },
-// },
-// {
-//     type: 'rawlist',
-//         name: 'beverage',
-//             message: 'You also get a free 2L beverage',
-//                 choices: ['Pepsi', '7up', 'Coke'],
-//     },
-// {
-//     type: 'list',
-//         name: 'prize',
-//             message: 'For leaving a comment, you get a freebie',
-//                 choices: ['cake', 'fries'],
-//                     when(answers) {
-//         return answers.comments !== 'Nope, all good!';
-//     },
-// },
+// inquirer.prompt(questions).then((answers) => {
+//     console.log('\nReadMeTemplate:');
+//     console.log(JSON.stringify(answers, null, '  '));
+// });
 
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {}
+// function to write README file
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, data, function (err) {
+        console.log(fileName);
+        console.log('data');
+    })
+}
 
-// TODO: Create a function to initialize app
-// function init() {}
+// function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data) {
+        writeToFile('README.md', generateMd(data));
+    })
+}
 
-// Function call to initialize app
-// init();
+init();
