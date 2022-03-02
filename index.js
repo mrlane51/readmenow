@@ -4,6 +4,7 @@ const fs = require('fs');
 const utils = require('utils');
 const inquirer = require('inquirer');
 const generateMd = require('./utils/generateMd');
+const renderLicenseSection = require('./utils/generateMd');
 
 // inital output to welcome user
 console.log(`Hello, Welcome to MrLane51's Professional ReadMe Generator.`);
@@ -70,12 +71,6 @@ const questions = [
     },  
 ];
 
-// inquirer.prompt(questions).then((answers) => {
-//     console.log('\nReadMeTemplate:');
-//     console.log(JSON.stringify(answers, null, '  '));
-// });
-
-
 // function to write README file
 function writeToFile(fileName, data) {
     fs.writeFile(fileName, data, function (err) {
@@ -88,7 +83,7 @@ function writeToFile(fileName, data) {
 function init() {
     inquirer.prompt(questions)
     .then(function(data) {
-        writeToFile('README.md', generateMd(data));
+        writeToFile('./utils/README.md', generateMd(data));
     })
 }
 

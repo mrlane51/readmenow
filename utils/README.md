@@ -1,11 +1,5 @@
-// // TODO: Create a function that returns the license section of README
-// // If there is no license, return an empty string
-// function renderLicenseSection(License) {}
 
-// // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
-return `
-${data.ProjectName}
+read me generator
 ---
 ##  Table of Contents:
 * [Description](#description)
@@ -21,38 +15,32 @@ ${data.ProjectName}
 
 
 ## Description:
-${data.Description}
+this project is for busy devs who can make a quick and professional read me on the fly
 
 ## Technologies Used:
 
-${data.technologies}
+javascript node js inquirer
 
 ## Design:
 
-${data.design}
+
 
 ## Usage:
 
-${data.usageInfo}
+For the busy developers who want to spend more time coding.
 
 ## Contribution:
-${data.Contributors}
+
 
 ## Author:
 --- 
-${data.author}
+mrlane51
 
 ## License:
 
-${data.License}
+undefined
 
 ## Questions?
 ---
 Any additional question? Reach out via Github!
-${data.email}
-`;
-}
-
-// ${data.github}
-
-module.exports = generateMarkdown;
+mrlane51@ymail.com
