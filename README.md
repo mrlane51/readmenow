@@ -1,13 +1,20 @@
-#### Node js ReadME Generator tool for busy Developers
+ #readme
+# Description: 
+generator for read me(#description)
 
-### things to include in a Great ReadME
+js node (#technologies-used)
 
-##  Table of Contents:
-[Description](#description)
-[Technologies Used](#technologies-used)
-[Design](#design)
-[Usage Information](#usage)
-[Contribution](#contribution)
-[Authors](#authors)
-[License](#license)
-[Faqs](#faqs)
+no(#design)
+
+github repos(#usage)
+
+(#contribution)
+
+mrlane51(#authors)
+
+undefined(#license)
+
+mrlane51@ymail.com(#email)
+
+github.com/mrlane51(#github)
+
